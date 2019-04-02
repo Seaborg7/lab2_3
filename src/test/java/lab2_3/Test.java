@@ -38,28 +38,28 @@ public class Test {
         Assert.assertEquals(0.0, result, delta);
 
     }
-    
+
     @org.junit.Test
     public void bothNullSequence() {
         double result = similarityFinder.calculateJackardSimilarity(nullseq, nullseq);
         Assert.assertEquals(1.0, result, delta);
 
     }
-    
+
     @org.junit.Test
     public void oneOneTwoSeq() {
         double result = similarityFinder.calculateJackardSimilarity(one, onetwo);
         Assert.assertEquals(0.5, result, delta);
 
     }
-    
+
     @org.junit.Test
     public void oneTwoOneSeq() {
         double result = similarityFinder.calculateJackardSimilarity(onetwo, one);
         Assert.assertEquals(0.5, result, delta);
 
     }
-    
+
     @org.junit.Test
     public void twoSameLengthCounterTest() {
         double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
@@ -67,7 +67,7 @@ public class Test {
         Assert.assertEquals(counter, seq1.length);
 
     }
-    
+
     @org.junit.Test
     public void bothNullCounterTest() {
         double result = similarityFinder.calculateJackardSimilarity(nullseq, nullseq);
@@ -75,11 +75,11 @@ public class Test {
         Assert.assertEquals(counter, nullseq.length);
 
     }
-    
+
     @org.junit.Test
     public void diffNegativeSequence() {
         double result = similarityFinder.calculateJackardSimilarity(neg1, neg2);
-        Assert.assertEquals(1.0/3, result, delta);
+        Assert.assertEquals(1.0 / 3, result, delta);
 
     }
 

@@ -4,8 +4,8 @@ import edu.iis.mto.search.SearchResult;
 import edu.iis.mto.search.SequenceSearcher;
 
 public class SequenceSearcherDubler implements SequenceSearcher {
-    
-    private int counter=0;
+
+    private int counter = 0;
 
     @Override
     public SearchResult search(int key, int[] seq) {
@@ -21,7 +21,7 @@ public class SequenceSearcherDubler implements SequenceSearcher {
         return builder.withFound(false)
                       .build();
     }
-    
+
     public int getCounter() {
         return counter;
     }
